@@ -230,8 +230,6 @@
 						</code></pre>
 						<aside class="notes" data-markdown>
 							<script type="text/template">
-								can also be written as (function () {}());
-								something about performance.	
 							</script>
 						</aside>
 					</section>
@@ -265,7 +263,7 @@
 	(function ($) {
 		var init, initSlider, initModal, initSearch;
 
-		init = function () {
+		init = function() {
 			initSlider();
 			initModal();
 			initSearch();
@@ -275,7 +273,7 @@
 		initSearch = function() { /* ... */ };
 		initModal  = function() { /* ... */ };		
 
-		$(document).ready(function () {
+		$(document).ready(function() {
 			init();
 		});
 	}(jQuery));
@@ -296,7 +294,7 @@
 	var myApp = (function ($) {
 		var init, initSlider, initModal;
 
-		init = function () {
+		init = function() {
 			initSlider();
 			initModal();
 		};
@@ -309,7 +307,7 @@
 		};
 	}(jQuery));
 
-	$(document).ready(function () {
+	$(document).ready(function() {
 		myApp.init();
 	});
 						</code></pre>
@@ -341,7 +339,7 @@
 	var myApp = (function ($) {
 		var init, initSlider, initSearch, search;
 
-		init = function () {
+		init = function() {
 			initSlider();
 			initSearch();
 		};
@@ -356,11 +354,11 @@
 		};
 	}(jQuery));
 
-	$(document).ready(function () {
+	$(document).ready(function() {
 		myApp.init();
 	});
 
-	$('#btn').click(function () {
+	$('#btn').click(function() {
 		myApp.search($('#someInput').val());
 	});
 						</code></pre>
