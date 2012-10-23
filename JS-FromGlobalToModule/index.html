@@ -262,7 +262,7 @@
 					<section>
 						<p>Slight optimalisation by using one var statement</p>
 
-						<pre><code contenteditable>	
+						<pre><code contenteditable style="max-height: 700px">	
 	(function ($) {
 		var init, initSlider, initModal, initSearch;
 
@@ -271,6 +271,7 @@
 			initModal();
 			initSearch();
 		};
+
 		initSlider = function() { /* ... */ };
 		initSearch = function() { /* ... */ };
 		initModal  = function() { /* ... */ };		
@@ -300,6 +301,7 @@
 			initSlider();
 			initModal();
 		};
+
 		initSlider = function() { /* ... */ };
 		initModal  = function() { /* ... */ };
 
@@ -344,6 +346,7 @@
 			initSlider();
 			initSearch();
 		};
+		
 		initSlider = function() { /* ... */ };
 		initSearch = function() { /* ... */ };
 		search     = function() { /* ... */ };
