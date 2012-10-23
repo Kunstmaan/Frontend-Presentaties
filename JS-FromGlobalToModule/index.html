@@ -76,6 +76,9 @@
 		var y = 2;
 	}
 
+	impliedGlobal();
+	localVar();
+
 	console.log(x); // 2
 	console.log(y);	// y is undefined
 						</code></pre>
@@ -101,6 +104,8 @@
 		console.log(x); // 2
 	}
 	
+	localVar();
+
 	console.log(x); // 5
 						</code></pre>
 						<aside class="notes" data-markdown>
@@ -128,6 +133,8 @@
 	function randomFunction() {
 		var a = b = 0;
 	}
+
+	randomFunction();
 
 	console.log(a); // undefined
 	console.log(b); // 0 
