@@ -217,16 +217,14 @@
 	var myApp = (function ($) {
 		var init, initSlider, initModal;
 
-		init = function() {
-			initSlider();
-			initModal();
-		};
-
 		initSlider = function() { /* ... */ };
 		initModal  = function() { /* ... */ };
 
 		return {
-			init: init
+			init: function() {
+				initSlider();
+				initModal();
+			}
 		};
 	}(jQuery));
 
