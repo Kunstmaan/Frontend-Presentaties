@@ -41,7 +41,54 @@
 		
 		<div class="reveal">
 			<div class="slides">
-				
+				<section>
+					<h1>CoffeeScript</h1>
+
+					<em>a little language that compiles into JavaScript</em>
+				</section>
+
+				<section>
+					<section>
+						<h2>Advantages</h2>
+						<ul>
+							<li>Easy to learn</li>
+							<li>Less code to write</li>
+							<li>Exposes a curated selection of JavaScript features, fixing many of the 	language's oddities</li>
+							<li>As fast, or faster than hand-written JavaScript</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Disadvantages</h2>
+						<ul>
+							<li>Learning curve</li>
+							<li>Another compilation step ( Sass)</li>
+							<li>Debugging can be difficult</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Installation</h2>
+						Install <a href="http://nodejs.org/">Node.js</a>, then:
+						<pre><code>
+	$ npm install -g coffee-script
+						</code></pre>
+					</section>
+					<section>
+						<h2>Usage</h2>
+						<p>Watch and compile</p>
+						<pre><code>
+	$ coffee -o js/ -cw /src			
+						</pre></code>
+						<br />			
+						<p>Concatenate files into a single script</p>
+						<pre><code>
+	$ coffee --join app.js --compile src/*.coffee
+						</code></pre>
+						<br />
+						Or use CodeKit.
+					</section>
+				</section>
 			</div>
 		</div>
 
