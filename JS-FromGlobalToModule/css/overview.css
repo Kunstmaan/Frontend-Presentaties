@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #eee;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 90%;
+}
+
+.box {
+    float: left;
+    margin: 10px;
+    width: 45%;
+}
+
+.box header {
+    display: block;
+    color: #4f4f4f;
+    padding: 10px;
+}
+
+.box header.bad {
+    background: #ff4400;
+}
+
+.box header.good {
+    background: #00D96D;
+}
+
+pre, code {
+    outline: none;
+}

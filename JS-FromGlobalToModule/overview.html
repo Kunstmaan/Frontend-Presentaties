@@ -1,0 +1,133 @@
+<!doctype html>  
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        
+        <title>JavaScript - From global namespace to modularity</title>
+
+        <meta name="description" content="JavaScript">
+        <meta name="author" content="Joris Ooms for Kunstmaan">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+        <link rel="stylesheet" href="css/overview.css">
+    </head>
+    
+    <body>
+        <div class="wrapper">
+            <div class="box">
+                <header class="bad">
+                    <h1>JavaScript</h1>
+                </header>
+                
+                <div>
+                    <pre><code contenteditable>
+function initSlider() {
+    
+}
+
+function intModal() {
+    
+}
+
+function initAnimation() {
+    
+}
+
+function search(someValue) {
+    
+}
+
+$(document).ready(function() {
+    initSlider();
+    initModal();
+    initAnimation();
+});
+
+$('#btn').click(function() {
+    search($('#someInput').val()); 
+});
+
+                    </code></pre>
+                </div>
+            </div>
+            <div class="box">
+                <header class="good">
+                    <h1>JavaScript</h1>
+                </header>
+                <div>
+                    <pre><code contenteditable>
+/*
+    global var myApplication to contain the module
+    assign jQuery to $
+    cache the window object
+    undefined argument but nothing gets passed in: 
+    undefined will always be undefined within the module
+*/
+var myApplication = (function($, window, undefined) {
+
+/*    
+    declare all variables before using them, with a single var statement. 
+    this way we won't ever create global variables
+*/
+    var init, initSlider, initModal, initAnimation;
+
+    init = function() {
+        initSlider();
+        initModal();
+        initAnimation();
+    };
+
+    initSlider = function() {
+
+    };
+
+    initModal = function() {
+
+    };
+
+    initAnimation = function() {
+
+    };
+
+    search = function(someValue) {
+
+    };
+
+/*
+    return an anonymous object with the public API of our application
+*/
+    return {
+        init: init,
+        search: search
+    }
+}(jQuery, window));
+
+/*
+    use the shorthand way of writing
+    $(document).ready(function() { });
+*/
+$(function() {
+    myApp.init(); 
+});
+
+/*
+    jQuery maps "$el.click(func)" to "$el.on('click', func)"
+    eliminate the extra method call
+*/
+$('#btn').on('click', function() {
+    myApp.search($('#someInput').val()); 
+});
+                    </code></pre>
+                </div>
+            </div>        
+        </div>
+        <script src="lib/js/highlight.js"></script>
+        <script type="text/javascript">
+            window.hljs.initHighlightingOnLoad();
+        </script>
+    </body>
+</html>
