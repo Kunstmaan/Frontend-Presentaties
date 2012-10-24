@@ -190,7 +190,7 @@
 						<p>Slight optimalisation by using one var statement</p>
 
 						<pre><code contenteditable style="max-height: 700px">	
-	(function ($) {
+	(function ($, window, undefined) {
 		var init, initSlider, initModal, initSearch;
 
 		init = function() {
@@ -206,7 +206,7 @@
 		$(document).ready(function() {
 			init();
 		});
-	}(jQuery));
+	}(jQuery, window));
 						</code></pre>
 					</section>
 				</section>
