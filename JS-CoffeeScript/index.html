@@ -67,6 +67,57 @@
 					</section>
 				</section>
 				<section>
+					<h2>Syntax</h2>
+					<section>
+						<h4>Comments</h4>
+
+						<p>Single-line</p>
+						<pre><code class="coffeescript">
+	# my awesome comment
+						</code></pre>
+						<p>Multi-line</p>
+						<pre><code class="coffeescript">
+	###
+	Lorem ipsum dolor sit amet, consectetur 
+	adipisicing elit, sed do eiusmod tempor 
+	incididunt ut labore et dolore magna aliqua. 
+	###		
+						</code></pre>
+					</section>
+					<section>
+						<h4>Functions</h4>
+						<small>CoffeeScript</small>
+						<pre><code class="coffeescript">
+	helloWorld = -> console.log 'Hello World'
+						</code></pre>
+
+						<small>JavaScript</small>
+						<pre><code class="javascript">
+	var helloWorld;
+
+	helloWorld = function() {
+  		return console.log('Hello World');
+	};
+						</code></pre>
+					</section>
+					<section>
+						<h4>Functions</h4>
+						<small>CoffeeScript</small>
+						<pre><code class="coffeescript">
+	multiply = (a, b) -> a * b
+						</code></pre>
+
+						<small>JavaScript</small>
+						<pre><code class="javascript">
+	var multiply;
+
+	multiply = function(a, b) {
+		return a * b;
+	};
+						</code></pre>
+					</section>
+				</section>
+				<section>
 					<section>
 						<h2>Installation</h2>
 						Install <a href="http://nodejs.org/">Node.js</a>, then:
