@@ -1,0 +1,119 @@
+<!doctype html>  
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        
+        <title>JavaScript - From global namespace to modularity</title>
+
+        <meta name="description" content="JavaScript">
+        <meta name="author" content="Joris Ooms for Kunstmaan">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="JS-FromGlobalToModule/lib/css/zenburn.css">
+        <link rel="stylesheet" href="JS-FromGlobalToModule/css/overview.css">
+    </head>
+    
+    <body>
+        <div class="wrapper" style="min-height: 400px">
+            <div class="box">
+                <header class="">
+                    <h1>Extend with class selector</h1>
+                </header>
+                
+                <div>
+                    <pre><code contenteditable>
+.btn {
+    background: tomato;
+    border: 3px solid #D6D6D6;
+    border-radius: 20px;
+    color: white;
+    font-size: 20px;
+    padding: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 200px;
+}
+
+.signup-btn {
+    @extend .btn;        
+}
+                    </code></pre>
+                </div>
+            </div>
+            <div class="box">
+                <header class="">
+                    <h1>Result</h1>
+                </header>
+                <div>
+                    <pre><code contenteditable>
+.btn, .signup-btn{
+    background:tomato;
+    border:3px solid #D6D6D6;
+    border-radius:20px;
+    color:#fff;
+    font-size:20px;
+    padding:30px;
+    text-align:center;
+    text-transform:uppercase;
+    width:200px
+}
+                    </code></pre>
+                </div>
+            </div>        
+        </div>
+                <div class="wrapper" style="min-height: 400px">
+            <div class="box">
+                <header class="">
+                    <h1>Extend with placeholder selector</h1>
+                </header>
+                
+                <div>
+                    <pre><code contenteditable>
+%btn {
+    background: tomato;
+    border: 3px solid #D6D6D6;
+    border-radius: 20px;
+    color: white;
+    font-size: 20px;
+    padding: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 200px;
+}
+
+.signup-btn {
+    @extend %btn;        
+}
+                    </code></pre>
+                </div>
+            </div>
+            <div class="box">
+                <header class="">
+                    <h1>Result</h1>
+                </header>
+                <div>
+                    <pre><code contenteditable>
+.signup-btn{
+    background:tomato;
+    border:3px solid #D6D6D6;
+    border-radius:20px;
+    color:#fff;
+    font-size:20px;
+    padding:30px;
+    text-align:center;
+    text-transform:uppercase;
+    width:200px
+}
+                    </code></pre>
+                </div>
+            </div>        
+        </div>
+        <script src="JS-FromGlobalToModule/lib/js/highlight.js"></script>
+        <script type="text/javascript">
+            window.hljs.initHighlightingOnLoad();
+        </script>
+    </body>
+</html>
